@@ -1,0 +1,259 @@
+:root{
+    --dark: #f6f0dd;
+    --dark1: #fff;
+    --dark2: "#666"
+}
+body{
+    background-color: var(--dark);
+    transition: background-color .3s ease;
+}
+
+input:focus {
+    border: 1px solid #dee2e6 !important;
+    box-shadow: none !important;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.leftNav,
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchBar,
+.card-body{
+    position: relative;
+}
+
+.searchBar i {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: gray;
+}
+
+.icons i {
+    padding: 0 !important;
+    font-size: 23px !important;
+}
+
+.icons {
+    gap: 20px;
+}
+
+.icons a {
+    color: #fff;
+}
+
+.setting {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(119, 118, 118, 0.5);
+}
+
+.setting img {
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.rightNav {
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+
+/* ////////////////////leftpost////////////////////////// */
+
+.profileBox {
+    width: 37%;
+    background-color: #ffc107;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% -70%;
+}
+
+.profileBox img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.postbody {
+    width: 95%;
+    display: grid;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    grid-template-columns: 1.5fr 3fr 1fr;
+    gap: 10px;
+    color: var(--dark2);
+}
+
+
+.createpost {
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: var(--dark1);
+}
+
+.postprofile {
+    width: 60px;
+    height: 60px;
+}
+
+.postprofile img,
+.postImage-video img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postbox {
+    display: flex;
+    align-items: center;
+}
+
+.btnOptions button {
+    width: 12vw;
+}
+
+/* //////////////////////////posts////////////////////// */
+.postInputContainer {
+    width: 100%;
+    background-color: var(--dark1);
+    border-radius: 15px;
+    padding: 15px 20px;
+}
+.userTag{
+    color: var(--dark2);
+    font-size: 12px;
+}
+.opt{
+    color: var(--dark2);
+}
+.postImage-video {
+    width: 100%;
+    min-height: 435px; 
+    max-height: 500px;
+    height: 100vh;
+    max-height: 80vh;
+}
+
+
+.image {
+    width: 60px;
+}
+
+.like-comment-share {
+    color: var(--dark2);
+}
+
+
+/* ////////////////////////Custom Button/////////////////////// */
+.darkBtn{
+    transform: translateX(133%)rotate(250deg);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color:  var(--dark1);
+    border-radius: 34px;
+    padding: 3px;
+    cursor: pointer;
+    transition: .3s ease;
+
+    .slider{
+        width: 43%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .5s ease;
+    }
+
+    .slider i{
+        font-size: 16px !important;
+        color: #ffc107;
+    }
+
+  }
+  
+
+/* ////////////////////////////////////////////////////// */
+  
+
+
+@media screen and (max-width:1000px) {
+    .rightpost {
+        display: none;
+    }
+
+    .postbody {
+        grid-template-columns: 1.5fr 3fr;
+    }
+
+    .rightNav {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .btnOptions button {
+        width: fit-content;
+    }
+
+    .leftpost,
+    .searchBar {
+        display: none;
+    }
+
+    .postbody {
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media screen and (max-width:500px){
+    nav {
+        display: grid;
+        grid-template-columns: 90% 1fr;
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+   
+    .icons {
+        order: 1;
+        justify-content: space-between;
+    }
+    .searchBar{
+        display: inline-block;
+        width: 100%;
+    }
+}
+
